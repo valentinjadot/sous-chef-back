@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 gem 'bootsnap', require: false
 gem 'data_migrate'
 gem 'enumerize'
-gem 'jbuilder', '~> 2.7'
 gem 'pg'
 gem 'power-types'
 gem 'power_api', '~> 2.0'
@@ -59,3 +58,11 @@ end
 group :production, :development, :test do
   gem 'tzinfo-data'
 end
+
+gem "clockwork", "~> 3.0"
+
+gem "hirb", "~> 0.7.3"
+
+gem "ruby-clock", "~> 1.0"
+
+gem "jbuilder", "~> 2.11"

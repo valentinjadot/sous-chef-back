@@ -1,10 +1,34 @@
-# This file should contain all the record creation needed to seed the database
-# with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-# Write the code in a way that can be executed multiple times without duplicating the information.
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
-# For example:
+# Examples:
 #
-# Country.create(name: "Chile") # BAD
-# Country.find_or_create_by(name: "Chile") # GOOD
-#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+students = %w[
+  alejandro
+  cristofer
+  cecilia
+  isa
+  vane
+  nacho
+  ronny
+  pablo
+  juan
+  carlos
+  valentin
+  manuii
+]
+
+students.each do |student|
+  User.create!(name: student, fin: true)
+end
+
+vegans = %w[
+  cristofer
+  nacho
+  ronny
+]
+
+User.where(name: vegans).update_all(vegan: true)
