@@ -18,7 +18,8 @@ Rails.application.configure do
   config.active_support.disallowed_deprecation = :log
   config.active_support.disallowed_deprecation_warnings = []
   config.log_formatter = ::Logger::Formatter.new
-  config.hosts << 'https://sous-chef.vercel.app/'
+  config.hosts << /[a-z0-9]+\.sous-chef\.vercel\.app/
+  config.hosts << /[a-z0-9]+\.pl-sous-chef-back-staging\.herokuapp\.com/
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
