@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :update, :destroy]
   before_action :create_next_window_orders, only: [:index, :show]
+  skip_before_action :verify_authenticity_token
 
   # GET /orders
   def index
