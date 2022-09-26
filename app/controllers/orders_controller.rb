@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
 
   # GET /orders
   def index
-    @orders = Order.includes(:user).all
+    @orders = Order.joins(:user).order('users.name')
   end
 
   # GET /orders/1
