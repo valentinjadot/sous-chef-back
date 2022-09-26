@@ -19,7 +19,7 @@ Rails.application.configure do
   config.active_support.disallowed_deprecation_warnings = []
   config.log_formatter = ::Logger::Formatter.new
   config.hosts = []
-  config.hosts << /[a-z0-9]+\.sous-chef\.vercel\.app/
+  config.hosts << ".sous-chef.vercel.app"
   config.hosts << ".pl-sous-chef-back-staging.herokuapp.com"
   config.hosts << ".pl-sous-chef-back-production.herokuapp.com"
 
