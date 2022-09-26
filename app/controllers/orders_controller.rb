@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
 
   # GET /orders
   def index
-    @orders = Order.includes(:user).joins(:user).order('orders.execution_date')
+    @orders = Order.next_window.includes(:user).joins(:user).order('orders.execution_date')
   end
 
   # GET /orders/1
